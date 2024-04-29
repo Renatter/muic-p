@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-[30px]">
+  <div class="mb-[30px] bg-[#EEF3F7] p-[30px] rounded-[25px]">
     <h1 class="text-[55px]">Бит сату</h1>
     <p class="text-[17px] pt-[15px] text-gray-500">
       Music жобасымен сіз өз шығармаңыздың әнін тиімді және заңды түрде сата

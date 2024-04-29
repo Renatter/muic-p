@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-[30px]">
+  <div class="mb-[30px] bg-[#EEF3F7] p-[30px] rounded-[25px]">
     <h1 class="text-[55px]">Ән сатып алу</h1>
     <p class="text-[17px] pt-[15px] text-gray-500">
       Music әртістерге белгілі авторлардың, композиторлардың, аранжировщиктердің

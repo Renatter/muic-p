@@ -102,9 +102,9 @@
       <div>
         <h1 class="text-[70px] font-bold">{{ currentTrack.name }}</h1>
         <p class="text-[30px]">Автор: {{ currentTrack.artist }}</p>
-        <p class="text-[30px]">Количество: {{ currentTrack.count }}шт</p>
+        <p class="text-[30px]">Саны: {{ currentTrack.count }}шт</p>
         <p class="text-[30px]">
-          Жанры:
+          Жанрлар:
           <span
             v-for="i in currentTrack.genre"
             class="mr-[15px] text-red-500"
@@ -133,6 +133,7 @@
             материалды тарату құқығымен жалға алу.
           </p>
           <button
+            @click="openModal(), (curPrice = currentTrack.defPrice)"
             type="button"
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
           >
@@ -153,10 +154,10 @@
           <p class="font-normal text-gray-700 dark:text-gray-400 h-[200px]">
             Wav Leasing. WAV 24bit+Mp3 320kb/s форматындағы битті жоғары сапалы,
             оны жазу және материалды тарату құқығымен жалға алу. WAV
-            форматындағы бит сапасы айтарлықтай жоғары, бұл жазу және араластыру
-            кезінде жақсы нәтиже береді.
+            форматындағы бит сапасы айтарлықтай жоғары.
           </p>
           <button
+            @click="openModal(), (curPrice = currentTrack.soPrice)"
             type="button"
             class="text-white bg-green-700 hover:bg-green-800focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
           >
@@ -174,26 +175,87 @@
           >
             Премиум {{ currentTrack.fullPrice }}
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400 h-[200px]">
+          <p class="font-normal text-gray-700 dark:text-gray-400 h-[270px]">
             Толық бит құқықтары сатып алушыға беріледі. Бит жоғары сапалы Wav
             24bit+Mp3 320kb/s форматында, сондай-ақ жақсырақ ақпарат алу және
-            оны жазу және материалды тарату құқығымен игеру үшін жолдардың
-            бойымен бит орналасуы арқылы беріледі.
+            оны жазу және материалды тарату құқығымен игеру.
+            <button
+              @click="openModal(), (curPrice = currentTrack.fullPrice)"
+              type="button"
+              class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+            >
+              Сатып Алу
+            </button>
           </p>
-          <button
-            type="button"
-            class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
-          >
-            Сатып Алу
-          </button>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="modal" v-if="modalOpen === true">
+    <div
+      class="text-[30px] bg-white w-[600px] h-[420px] rounded-[15px] p-[35px]"
+    >
+      <div class="flex">
+        <img :src="currentTrack.cover" class="rounded-[15px]" alt="" />
+        <div class="ml-[15px]">
+          <h1 class="text-[50px]">{{ currentTrack.name }}</h1>
+          <p class="tex-[25px]">{{ currentTrack.artist }}</p>
+        </div>
+      </div>
+      <label
+        for="input-group-1"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white pt-[20px]"
+        >Сіздің Поштаңыз</label
+      >
+      <div class="relative mb-6">
+        <div
+          class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 16"
+          >
+            <path
+              d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+            />
+            <path
+              d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+            />
+          </svg>
+        </div>
+        <input
+          v-model="email"
+          type="text"
+          id="input-group-1"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="name@gmail.com"
+        />
+      </div>
+      <p>Бағасы: {{ curPrice }} тг</p>
+      <button
+        @click="addOrder"
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Жіберу
+      </button>
+      <button
+        @click="closeModal"
+        type="button"
+        class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+      >
+        Жабу
+      </button>
     </div>
   </div>
 </template>
 
 <script>
 import {
+  addDoc,
   collection,
   query,
   where,
@@ -209,6 +271,8 @@ import { db, auth } from "../firebase/firebase";
 export default {
   data() {
     return {
+      curPrice: 0,
+      modalOpen: false,
       audio: null,
       circleLeft: null,
       barWidth: null,
@@ -221,9 +285,31 @@ export default {
       transitionName: null,
       id: this.$route.params.id,
       clickCount: 0,
+      email: "",
     };
   },
   methods: {
+    openModal() {
+      this.modalOpen = true;
+    },
+    closeModal() {
+      this.modalOpen = false;
+    },
+    async addOrder() {
+      try {
+        await addDoc(collection(db, "orders"), {
+          name: this.currentTrack.name,
+          img: this.currentTrack.cover,
+          artist: this.currentTrack.artist,
+          price: this.curPrice,
+          email: this.email,
+        });
+        this.closeModal();
+        console.log("Email added successfully!");
+      } catch (error) {
+        console.error("Error adding email: ", error);
+      }
+    },
     play() {
       if (this.audio.paused) {
         this.audio.play();
@@ -737,5 +823,23 @@ body {
   transform: scale(0.55);
   pointer-events: none;
   opacity: 0;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
 </style>

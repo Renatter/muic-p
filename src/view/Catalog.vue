@@ -20,13 +20,15 @@
         <p>
           {{ i.name }} <span>{{ i.fullPrice }}тг</span>
         </p>
-        <p>В наличии 5шт</p>
-        <button
-          type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-[100%]"
-        >
-          Купить
-        </button>
+        <p>Қолда бар: {{ i.count }} шт</p>
+        <router-link :to="{ path: 'mus-page/' + i.name }">
+          <button
+            type="button"
+            class="text-white mt-[15px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-[100%]"
+          >
+            Сатып алу
+          </button>
+        </router-link>
       </div>
     </div>
     <div class="w-[400px] bg-fuchsia-50 m-[15px] rounded-[30px]">

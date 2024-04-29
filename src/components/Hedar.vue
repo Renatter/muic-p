@@ -3,20 +3,19 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
-      <a
-        href="https://flowbite.com/"
-        class="flex items-center space-x-3 rtl:space-x-reverse"
-      >
-        <img
-          src="https://www.creativefabrica.com/wp-content/uploads/2020/02/12/Music-Logo-Graphics-1-36-580x386.jpg"
-          class="h-8"
-          alt="Flowbite Logo"
-        />
-        <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-          >Music
-        </span>
-      </a>
+      <router-link to="/main-page/catalog">
+        <a class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="https://www.creativefabrica.com/wp-content/uploads/2020/02/12/Music-Logo-Graphics-1-36-580x386.jpg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Music
+          </span>
+        </a>
+      </router-link>
       <button
         data-collapse-toggle="navbar-default"
         type="button"
@@ -63,7 +62,7 @@
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
               >
-                Как продать</a
+                Қалай сатуға болады</a
               >
             </router-link>
           </li>
@@ -73,7 +72,7 @@
                 href="#"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Как купить</a
+                Қалай сатып алуға болады</a
               >
             </router-link>
           </li>
@@ -83,31 +82,44 @@
                 href="#"
                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Запись вокала</a
+                Вокалды жазу</a
               >
             </router-link>
           </li>
           <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >О нас</a
-            >
+            <router-link to="/main-page/about">
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Біз туралы</a
+              >
+            </router-link>
           </li>
-          <li>
-            <a
-              href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+          <router-link to="/login" v-if="!isAdmin">
+            <button
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
-              Контакты</a
+              Кіру
+            </button>
+          </router-link>
+          <div v-if="isAdmin">
+            <button
+              @click="logout"
+              type="button"
+              class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
             >
-          </li>
-          <button
-            type="button"
-            class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
-          >
-            Войти
-          </button>
+              Шығу
+            </button>
+            <router-link to="/admin">
+              <button
+                type="button"
+                class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+              >
+                Админ
+              </button>
+            </router-link>
+          </div>
         </ul>
       </div>
     </div>
@@ -115,7 +127,48 @@
 </template>
 
 <script>
-export default {};
+import {
+  collection,
+  getDocs,
+  addDoc,
+  deleteDoc,
+  onSnapshot,
+  doc,
+} from "firebase/firestore";
+import { db, auth } from "../firebase/firebase";
+export default {
+  data() {
+    return {
+      isAdmin: false,
+    };
+  },
+  methods: {
+    logout() {
+      auth.signOut();
+      this.isAdmin = false;
+    },
+  },
+  async created() {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        this.isAuthenticated = true;
+        const docRef = doc(db, "userProfile", user.uid);
+        const unsubscribeCart = onSnapshot(docRef, (docSnap) => {
+          if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            this.isAdmin = docSnap.data().isAdmin;
+            console.log(this.isAdmin);
+          } else {
+            console.log("No such document!");
+          }
+        });
+
+        // Save the unsubscribe functions to be used when the component is destroyed
+        this.unsubscribeCart = unsubscribeCart;
+      }
+    });
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
