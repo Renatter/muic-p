@@ -8,7 +8,9 @@
           v-for="i in item"
         >
           <img :src="i.img" alt="" class="rounded-[35px] mb-[15px]" />
+          <p>Аты: {{ i.userName }}</p>
           <p>Email:{{ i.email }}</p>
+          <p>Номерi: {{ i.phone }}</p>
           <p>Бағасы:{{ i.price }}</p>
           <p>Бит: {{ i.name }}</p>
           <button

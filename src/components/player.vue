@@ -193,7 +193,7 @@
   </div>
   <div class="modal" v-if="modalOpen === true">
     <div
-      class="text-[30px] bg-white w-[600px] h-[420px] rounded-[15px] p-[35px]"
+      class="text-[30px] bg-white w-[600px] h-[520px] rounded-[15px] p-[35px]"
     >
       <div class="flex">
         <img :src="currentTrack.cover" class="rounded-[15px]" alt="" />
@@ -207,7 +207,7 @@
         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white pt-[20px]"
         >Сіздің Поштаңыз</label
       >
-      <div class="relative mb-6">
+      <div class="relative">
         <div
           class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
         >
@@ -232,6 +232,37 @@
           id="input-group-1"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="name@gmail.com"
+        />
+      </div>
+      <div>
+        <label
+          for="phone"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Сіздің номер</label
+        >
+        <input
+          v-model="phone"
+          type="tel"
+          id="phone"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="123-45-678"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          required
+        />
+      </div>
+      <div>
+        <label
+          for="first_name"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Сіздің атыныз</label
+        >
+        <input
+          v-model="name"
+          type="text"
+          id="first_name"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="John"
+          required
         />
       </div>
       <p>Бағасы: {{ curPrice }} тг</p>
@@ -286,6 +317,8 @@ export default {
       id: this.$route.params.id,
       clickCount: 0,
       email: "",
+      name: "",
+      phone: "",
     };
   },
   methods: {
@@ -303,6 +336,8 @@ export default {
           artist: this.currentTrack.artist,
           price: this.curPrice,
           email: this.email,
+          userName: this.name,
+          phone: this.phone,
         });
         this.closeModal();
         console.log("Email added successfully!");
