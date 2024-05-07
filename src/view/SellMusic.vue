@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="b h-[700px] object-scale-down rounded-[20px] text-[white]">
       <div class="pt-[100px] px-[200px]">
         <h1 class="font-bold text-[35px] text-center pt-[30px]">
@@ -303,5 +303,9 @@ export default {
 }
 .accordion.active .accordion-body {
   display: block;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
 }
 </style>

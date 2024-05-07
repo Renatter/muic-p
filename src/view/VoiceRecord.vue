@@ -1,22 +1,102 @@
 <template>
-  <div>
-    <div class="flex ml-[105px] bg-[#EEF3F7] rounded-[25px] p-[30px]">
-      <div class="font-[500] text-[45px]">
-        <h1>
-          Сіз керемет ән айтасыз, <br />
-          бірақ тректі жазу дағдылары <br />
-          мен мүмкіндіктері жоқ па?
+  <div class="container">
+    <div>
+      <div
+        class="w-[100%] h-[700px] rounded-[30px] bg-[#14002E] text-white relative container"
+      >
+        <h1 class="font-bold text-[76px] absolute left-[30px] top-[80px] z-50">
+          Музыка жасаушылардың <br />
+          мүмкіндіктерін кеңейту
         </h1>
-        <h1 class="text-[30px] text-red-600">
-          дәл қазір және осы жерде <br />
-          трекіңізді жазыңыз
-        </h1>
-        <button @click="openModal()" class="button-50" role="button">
-          тегін көріу
-        </button>
+        <img
+          class="absolute right-[20px] w-[500px] rounded-[20px] top-[70px]"
+          src="https://images.squarespace-cdn.com/content/v1/617a9e641b1f271a2c64f8f6/e4ec5989-f8be-4857-a65a-69007b744846/banner_1.jpg?format=1000w"
+          alt=""
+        />
+        <img
+          src="https://static1.squarespace.com/static/617a9e641b1f271a2c64f8f6/t/6181525f1830395ae8ff88d8/1635865183396/Wawes.png"
+          alt=""
+        />
+        <p class="absolute left-[30px] text-[25px] z-50 bottom-[80px]">
+          Ойын алаңы тең болған кезде талант шыңға көтерілуі мүмкін. <br />
+          Біздің ойымызша, әркім өз орнын <br />
+          басты назарда ұстау мүмкіндігіне лайық.
+        </p>
       </div>
-      <img class="w-[500px]" src="../assets/bg.png" alt="" />
     </div>
+    <div class="flex container justify-between flex-wrap">
+      <div class="pt-[130px] text-[#14002e] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#F96C4B] p-[25px] rounded-[20px] bg-[white] hover:bg-[#F96C4B] hover:text-[white]"
+        >
+          <h1 class="text-[40px] font-bold">Жұмысты Бастау</h1>
+          <p class="font-bold text-[20px]">
+            Air bit платформасын пайдалану туралы білуіңіз керек барлық нәрсе,
+            негізгі есептік жазбаны орнатудан бастап кеңейтілген сату
+            мүмкіндіктерін пайдалануға дейін, сіз мұның бәрін үйренесіз.
+          </p>
+        </div>
+      </div>
+      <div class="pt-[130px] text-[#14002e] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#FFBD1A] p-[25px] rounded-[20px] bg-[white] hover:bg-[#FFBD1A] hover:text-[white]"
+        >
+          <h1 class="text-[40px] font-bold">Мансап Құру</h1>
+          <p class="font-bold text-[20px]">
+            Білім-бұл күш, сондықтан музыкадағы табысты мансапты құру және
+            дамыту бойынша нұсқаулықтарымызбен табысқа жетуге дайындалыңыз.
+          </p>
+        </div>
+      </div>
+      <div class="pt-[130px] text-[#14002e] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#9A00FF] p-[25px] rounded-[20px] bg-[white] hover:bg-[#9A00FF] hover:text-[white]"
+        >
+          <h1 class="text-[40px] font-bold">Хабарландырулар</h1>
+          <p class="font-bold text-[20px]">
+            Барлық Жаңа Нәрселерді Біліп Алыңыз, Бірақ Жаңа мүмкіндіктер,
+            іс-шаралар, байқаулар және т.б. арқылы Ұсынуға тура келеді.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-[130px] text-[#14002e] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#17AAFF] p-[25px] rounded-[20px] bg-[white] hover:bg-[#17AAFF] hover:text-[white]"
+        >
+          <h1 class="text-[40px] font-bold">Жақсы Музыка Жасаңыз</h1>
+          <p class="font-bold text-[20px]">
+            Музыканы жақсартуға көмектесу үшін біздің қоғамдастықтан жаңа
+            кеңестер, амалдар мен дағдыларды үйреніңіз.
+          </p>
+        </div>
+      </div>
+      <div class="pt-[130px] text-[#14002e] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#D31197] p-[25px] rounded-[20px] bg-[white] hover:bg-[#D31197] hover:text-[white]"
+        >
+          <h1 class="text-[40px] font-bold">Қауымдастық Жаңалықтары</h1>
+          <p class="font-bold text-[20px]">
+            Біз өз қауымдастығымызды мақтан тұтамыз және дәл осы жерде олардың
+            сұхбаттарын, подкасттарын және жетістіктерін бүкіл әлеммен бөлісетін
+            боламыз.
+          </p>
+        </div>
+      </div>
+      <div class="pt-[130px] text-[white] cursor-pointer">
+        <div
+          class="w-[400px] border-[2px] h-[350px] border-[#6900FF] p-[25px] rounded-[20px] bg-[#6900FF]"
+          bg-
+        >
+          <h1 class="text-[40px] font-bold">Бізге қосылыңыз</h1>
+          <p class="font-bold text-[20px]">
+            Creator Hub және қауымдастығымыздағы жаңа мазмұн туралы хабарландыру
+            алу үшін біздің тарату тізімімізге жазылыңыз
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="mt-[55px] flex justify-evenly items-center">
       <img
         class="rounded-[15px]"
@@ -72,67 +152,50 @@
         </ol>
       </div>
     </div>
-
-    <div class="w-[100%] bg-slate-100 mt-[10px] rounded-[20px]">
-      <div class="">
-        <div class="w-[1000px] h-[100px] ml-[30px]">
-          <h1 class="text-[60px]">Бізге пошта арқылы жіберіңіз</h1>
-        </div>
-        <button class="ml-[60px] button-50" role="button" @click="openModal()">
-          тегін көріу
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="modal" v-if="modalOpen === true">
     <div
-      class="text-[30px] bg-white w-[600px] h-[200px] rounded-[15px] p-[35px]"
+      class="border-[#14002E] text-[#14002E] p-[45px] border-[1px] rounded-[30px] mt-[25px] w-[100%] h-[100%]"
     >
-      <label
-        for="input-group-1"
-        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >Сіздің Поштаңыз</label
-      >
-      <div class="relative mb-6">
-        <div
-          class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
-        >
-          <svg
-            class="w-4 h-4 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 16"
+      <h1 class="text-[30px] font-bold">Циклде болыңыз</h1>
+      <p>
+        108 Елден 800 000 жасаушыға Қосылыңыз, Олар Бір-біріміздің
+        көңіл-күйімізді көтеру, байланыс орнату және ынтымақтастық үшін жұмыс
+        істеп жатқан Кезде Эфирді, бірақ қауымдастықты құрайды.
+      </p>
+      <div class="flex justify-between w-[450px]">
+        <div class="w-[100%]">
+          <label
+            for="first_name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Аты</label
           >
-            <path
-              d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
-            />
-            <path
-              d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
-            />
-          </svg>
+          <input
+            type="text"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 w-[100%] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Аты"
+            required
+          />
         </div>
-        <input
-          v-model="email"
-          type="text"
-          id="input-group-1"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="name@gmail.com"
-        />
+        <div class="ml-[10px]">
+          <label
+            for="first_name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Email</label
+          >
+          <input
+            type="text"
+            id="first_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Email"
+            required
+          />
+        </div>
       </div>
       <button
-        @click="addEmail"
         type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium border-[#14002E] w-[150px] mt-[30px] text-gray-900 focus:outline-none bg-white rounded-lg border hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
       >
-        Жіберу
-      </button>
-      <button
-        @click="closeModal"
-        type="button"
-        class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-      >
-        Жабу
+        Тiркелу
       </button>
     </div>
   </div>
@@ -168,6 +231,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
 /* CSS */
 .button-50 {
   appearance: button;

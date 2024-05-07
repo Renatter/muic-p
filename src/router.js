@@ -22,18 +22,12 @@ const routes = [{
                 path: 'catalog',
                 component: Catalog
             },
-            {
-                path: 'about',
-                component: About
-            },
+
             {
                 path: 'sell',
                 component: SellMusic
             },
-            {
-                path: 'voice',
-                component: VoiceRecord
-            },
+
             {
                 path: 'buy',
                 component: BuyMusic
@@ -53,7 +47,18 @@ const routes = [{
     }, {
         path: '/order',
         component: Order
-    }
+    }, {
+        path: '/voice',
+        component: VoiceRecord
+    },
+    {
+        path: '/about',
+        component: About
+    },
+    {
+        path: '/sell',
+        component: SellMusic
+    },
 ];
 
 const router = createRouter({
