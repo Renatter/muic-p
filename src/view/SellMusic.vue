@@ -107,7 +107,43 @@
           </div>
         </div>
       </div>
+      <div class="container mx-auto px-20 py-4">
+    <div class="flex gap-[50px]">
+        <!-- Форма для связи с нами -->
+        <div class="w-1/2 p-4 h-[200px] bg-[#6900FF] rounded-3xl">
+            <h2 class="text-3xl text-white font-semibold mb-4">Бізбен байланысу</h2>
+            <div class="mb-4 text-white text-xl">
+                <p>Орал қаласы, Пушкин көшесі, 14</p>
+                <p>Телефон: +7 (123) 456-7890</p>
+                <p>Email: info@example.com</p>
+            </div>
+        </div>
 
+        <!-- Форма обратной связи -->
+        <div class="w-1/2 p-8 bg-[#6900FF] rounded-3xl">
+            <h2 class="text-3xl mt-4 font-semibold mb-4  text-white">Кері байланыс</h2>
+            <form action="#" method="POST">
+                <div class="mb-4">
+                    <label class="block text-lg font-medium mb-2 text-white" for="name">Аты-жөні</label>
+                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="text" id="name" name="name" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-lg font-medium mb-2 text-white" for="email">Email</label>
+                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="email" id="email" name="email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-lg font-medium mb-2 text-white" for="phone">Телефон</label>
+                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-lg font-medium mb-2 text-white" for="message">Хабарлама</label>
+                    <textarea class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800" type="submit">Жіберу</button>
+            </form>
+        </div>
+    </div>
+</div>
       <h1 class="text-[60px] font-bold text-center py-[30px]">Пікірлер</h1>
       <div class="flex justify-evenly pb-[50px]">
         <div class="w-[350px] bg-[#098C8C] p-[30px] h-[350px] rounded-[20px]">
@@ -168,43 +204,7 @@
       </div>
     </div>
   </div>
-  <div class="container mx-auto px-20 py-4">
-    <div class="flex gap-[50px]">
-        <!-- Форма для связи с нами -->
-        <div class="w-1/2 p-4 h-[200px] bg-[#6900FF] rounded-3xl">
-            <h2 class="text-3xl text-white font-semibold mb-4">Бізбен байланысу</h2>
-            <div class="mb-4 text-white text-xl">
-                <p>Орал қаласы, Пушкин көшесі, 14</p>
-                <p>Телефон: +7 (123) 456-7890</p>
-                <p>Email: info@example.com</p>
-            </div>
-        </div>
 
-        <!-- Форма обратной связи -->
-        <div class="w-1/2 p-8 bg-[#6900FF] rounded-3xl">
-            <h2 class="text-3xl mt-4 font-semibold mb-4  text-white">Кері байланыс</h2>
-            <form action="#" method="POST">
-                <div class="mb-4">
-                    <label class="block text-lg font-medium mb-2 text-white" for="name">Аты-жөні</label>
-                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="text" id="name" name="name" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-lg font-medium mb-2 text-white" for="email">Email</label>
-                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="email" id="email" name="email" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-lg font-medium mb-2 text-white" for="phone">Телефон</label>
-                    <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-lg font-medium mb-2 text-white" for="message">Хабарлама</label>
-                    <textarea class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800" type="submit">Жіберу</button>
-            </form>
-        </div>
-    </div>
-</div>
 
 
 </template>
