@@ -1,37 +1,36 @@
 <template>
   <div
-    class="w-[100%] rounded-[15px] ml-[30px] bg-[#EEF3F7] bor flex justify-between"
+    class="w-[100%] rounded-[15px] ml-[30px] bg-[#c13592] bor flex justify-between mt-10"
   >
-    <div class="flex flex-wrap gap-[25px]">
+    <div class="flex flex-wrap gap-[20px]">
       <div
-        class="w-[200px] p-[10px] m-[15px] bg-white rounded-[15px]"
+        class="w-[250px] p-[10px] m-[15px] bg-[#14002e] rounded-[15px]"
         v-for="i in filteredTracks"
         :key="i"
       >
         <router-link :to="{ path: 'mus-page/' + i.name }">
           <div class="image-wrapper">
             <img
-              class="rounded-[10px] image w-full object-cover"
+              class="rounded-[10px] image w-full mb-5 object-cover"
               :src="i.cover"
               alt=""
             />
           </div>
         </router-link>
-        <p>
-          {{ i.name }} <span>{{ i.fullPrice }}тг</span>
+        <p class='text-white text-xl'>
+          {{ i.name }} <br><span>{{ i.fullPrice }}тг</span>
         </p>
-        <p>Қолда бар: {{ i.count }} шт</p>
         <router-link :to="{ path: 'mus-page/' + i.name }">
           <button
             type="button"
-            class="text-white mt-[15px] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-[100%]"
+            class="text-white mt-[15px] bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-[100%]"
           >
             Сатып алу
           </button>
         </router-link>
       </div>
     </div>
-    <div class="w-[400px] bg-fuchsia-50 m-[15px] rounded-[30px]">
+    <div class="w-[400px] h-[400px] bg-fuchsia-50 m-[15px] rounded-[30px]">
       <div class="flex">
         <div class="flex items-center mb-4 p-[25px]" @click="sortDescending">
           <input
@@ -92,16 +91,12 @@
 </template>
 
 <script>
-import { useAnimeApi } from "../tracks";
 import {
-  onSnapshot,
-  collection,
-  addDoc,
-  doc,
-  setDoc,
-  getDocs,
-} from "firebase/firestore";
-import { db, auth } from "../firebase/firebase";
+collection,
+getDocs
+} from "firebase/firestore"
+import { db } from "../firebase/firebase"
+import { useAnimeApi } from "../tracks"
 export default {
   data() {
     return {

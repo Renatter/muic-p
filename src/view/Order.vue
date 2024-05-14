@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="text-[35px]">Тапсырыстар</h1>
+      <h1 class="text-[35px] mb-10 text-white font-bold mt-10">Тапсырыстар</h1>
       <div class="flex gap-[15px]">
         <div
-          class="rounded-[15px] bg-red-300 w-[270px] h-[100%] p-[20px]"
+          class="rounded-[15px] bg-[#cbb3ee] w-[270px] h-[100%] p-[20px]"
           v-for="i in item"
         >
           <img :src="i.img" alt="" class="rounded-[35px] mb-[15px]" />

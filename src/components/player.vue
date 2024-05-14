@@ -42,15 +42,15 @@
         <div class="progress" ref="progress">
           <div class="progress__top">
             <div class="album-info" v-if="currentTrack">
-              <div class="album-info__name">{{ currentTrack.artist }}</div>
-              <div class="album-info__track">{{ currentTrack.name }}</div>
+              <div class="album-info__name text-white">{{ currentTrack.artist }}</div>
+              <div class="album-info__track text-white">{{ currentTrack.name }}</div>
             </div>
             <div class="progress__duration">{{ duration }}</div>
           </div>
           <div class="progress__bar" @click="clickProgress">
             <div class="progress__current" :style="{ width: barWidth }"></div>
           </div>
-          <div class="progress__time">{{ currentTime }}</div>
+          <div class="progress__time text-white">{{ currentTime }}</div>
         </div>
         <div v-cloak></div>
       </div>
@@ -96,18 +96,18 @@
     </svg>
   </div>
   <div
-    class="w-[100%] bg-[#EEF3F7] h-[750px] ml-[15px] rounded-[25px] p-[25px] items-center"
+    class="w-[100%] bg-[#c13592] h-[750px] ml-[15px] rounded-[25px] p-[25px] items-center"
   >
     <div class="flex justify-between">
       <div>
-        <h1 class="text-[70px] font-bold">{{ currentTrack.name }}</h1>
-        <p class="text-[30px]">Автор: {{ currentTrack.artist }}</p>
-        <p class="text-[30px]">Саны: {{ currentTrack.count }}шт</p>
-        <p class="text-[30px]">
+        <h1 class="text-[70px] text-white font-bold">{{ currentTrack.name }}</h1>
+        <p class="text-[30px] text-white">Автор: {{ currentTrack.artist }}</p>
+        <p class="text-[30px] text-white">Саны: {{ currentTrack.count }}шт</p>
+        <p class="text-[30px] text-white">
           Жанрлар:
           <span
             v-for="i in currentTrack.genre"
-            class="mr-[15px] text-red-500"
+            class="mr-[15px] text-white"
             >{{ i }}</span
           >
         </p>
@@ -121,21 +121,21 @@
       <div>
         <div
           href="#"
-          class="block max-w-sm p-6 bg-white rounded-[15px] hover:bg-gray-100 hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px]  hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            MP3 Аренда {{ currentTrack.defPrice }} тг
+            MP3 форматында сатып алу<br> {{ currentTrack.defPrice }} тг
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400 h-[200px]">
+          <p class="font-normal text-white dark:text-gray-400 h-[200px]">
             Битті mp3 320kb/s форматында жоғары сапалы, оған жазу және
-            материалды тарату құқығымен жалға алу.
+            материалды тарату құқығымен сатып алу. 
           </p>
           <button
             @click="openModal(), (curPrice = currentTrack.defPrice)"
             type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+            class="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
           >
             Сатып Алу
           </button>
@@ -144,22 +144,21 @@
       <div>
         <div
           href="#"
-          class="block max-w-sm p-6 bg-white rounded-[15px] hover:bg-gray-100 hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px]  hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            Wav + Mp3 Аренда {{ currentTrack.soPrice }}
+            Wav форматында сатып алу <br> {{ currentTrack.soPrice }} тг
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400 h-[200px]">
-            Wav Leasing. WAV 24bit+Mp3 320kb/s форматындағы битті жоғары сапалы,
-            оны жазу және материалды тарату құқығымен жалға алу. WAV
-            форматындағы бит сапасы айтарлықтай жоғары.
+          <p class="font-normal text-white dark:text-gray-400 h-[200px]">
+            WAV 24bit+Mp3 320kb/s форматындағы битті жоғары сапалы,
+            оны жазу және материалды тарату құқығымен сатып алу.
           </p>
           <button
             @click="openModal(), (curPrice = currentTrack.soPrice)"
             type="button"
-            class="text-white bg-green-700 hover:bg-green-800focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+            class="text-white mt-5 bg-green-700 hover:bg-green-800focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
           >
             Сатып Алу
           </button>
@@ -168,23 +167,23 @@
       <div>
         <div
           href="#"
-          class="block max-w-sm p-6 bg-white rounded-[15px] hover:bg-gray-100 hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px] hover:bg-gray-700 hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="mb-[65px] text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            Премиум {{ currentTrack.fullPrice }}
+            Премиум <br>{{ currentTrack.fullPrice }} тг
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400 h-[270px]">
+          <p class="font-normal text-white dark:text-gray-400 h-[270px]">
             Толық бит құқықтары сатып алушыға беріледі. Бит жоғары сапалы Wav
             24bit+Mp3 320kb/s форматында, сондай-ақ жақсырақ ақпарат алу және
-            оны жазу және материалды тарату құқығымен игеру.
+            оны жазу және материалды тарату құқығы беріледі.
             <button
               @click="openModal(), (curPrice = currentTrack.fullPrice)"
               type="button"
-              class="text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
+              class="text-black mt-3 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 w-full"
             >
-              Сатып Алу
+              <b>Сатып Алу</b>
             </button>
           </p>
         </div>
@@ -196,7 +195,7 @@
       class="text-[30px] bg-white w-[600px] h-[520px] rounded-[15px] p-[35px]"
     >
       <div class="flex">
-        <img :src="currentTrack.cover" class="rounded-[15px]" alt="" />
+        <img :src="currentTrack.cover" class="rounded-[15px] h-[150px]" alt="" />
         <div class="ml-[15px]">
           <h1 class="text-[50px]">{{ currentTrack.name }}</h1>
           <p class="tex-[25px]">{{ currentTrack.artist }}</p>
@@ -286,19 +285,14 @@
 
 <script>
 import {
-  addDoc,
-  collection,
-  query,
-  where,
-  getDocs,
-  setDoc,
-  doc,
-  onSnapshot,
-  getDoc,
-  arrayUnion,
-  updateDoc,
-} from "firebase/firestore";
-import { db, auth } from "../firebase/firebase";
+addDoc,
+collection,
+getDocs,
+query,
+updateDoc,
+where
+} from "firebase/firestore"
+import { db } from "../firebase/firebase"
 export default {
   data() {
     return {
@@ -511,7 +505,7 @@ body {
 }
 
 .player {
-  background: #eef3f7;
+  background: #610e45;
   width: 410px;
   min-height: 480px;
   box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
@@ -570,7 +564,7 @@ body {
         background: inherit;
         width: 100%;
         height: 100%;
-        box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, 0.5);
+        box-shadow: 0px 10px 40px 0px white;
         display: block;
         z-index: 1;
         position: absolute;
@@ -624,7 +618,7 @@ body {
       font-size: 30px;
       padding: 5px;
       margin-bottom: 10px;
-      color: #acb8cc;
+      color: white;
       cursor: pointer;
       width: 50px;
       height: 50px;
@@ -637,7 +631,7 @@ body {
         font-size: 26px;
         padding: 5px;
         margin-right: 10px;
-        color: #acb8cc;
+        color: #white;
         cursor: pointer;
         width: 40px;
         height: 40px;
@@ -728,14 +722,14 @@ body {
   }
 
   &__duration {
-    color: #71829e;
+    color: white;
     font-weight: 700;
     font-size: 20px;
     opacity: 0.5;
   }
   &__time {
     margin-top: 2px;
-    color: #71829e;
+    color: white;
     font-weight: 700;
     font-size: 16px;
     opacity: 0.7;
@@ -745,7 +739,7 @@ body {
   height: 6px;
   width: 100%;
   cursor: pointer;
-  background-color: #d0d8e6;
+  background-color: white;
   display: inline-block;
   border-radius: 10px;
 }
@@ -757,7 +751,7 @@ body {
 }
 
 .album-info {
-  color: #71829e;
+  color: white;
   flex: 1;
   padding-right: 60px;
   user-select: none;

@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <nav class="bg-gray-900">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
@@ -11,8 +11,8 @@
             alt="Flowbite Logo"
           />
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Music
+            class="self-center text-2xl text-white font-semibold whitespace-nowrap"
+            >YourBeat
           </span>
         </a>
       </router-link>
@@ -42,13 +42,13 @@
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center font-bold"
+          class="flex flex-col text-white bg-gray-900 p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 items-center font-bold"
         >
           <li>
             <router-link to="/main-page/catalog">
               <a
                 href="#"
-                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md: md:p-0 dark:text-white md:text-[#c13592]"
                 aria-current="page"
               >
                 Каталог</a
@@ -59,7 +59,7 @@
             <router-link to="/sell">
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#c13592] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
               >
                 Қалай сатуға болады</a
@@ -70,9 +70,9 @@
             <router-link to="/main-page/buy">
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#c13592] md:p-0 dark:text-white md:dark:hover:text-[#c13592] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Продюсерлер</a
+                Біздің ұжым</a
               >
             </router-link>
           </li>
@@ -80,7 +80,7 @@
             <router-link to="/voice">
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#c13592] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Вокалды жазу</a
               >
@@ -90,7 +90,7 @@
             <router-link to="/about">
               <a
                 href="#"
-                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#c13592] md:p-0 dark:text-white md:dark:hover:text-[#c13592] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Біз туралы</a
               >
             </router-link>
@@ -128,14 +128,10 @@
 
 <script>
 import {
-  collection,
-  getDocs,
-  addDoc,
-  deleteDoc,
-  onSnapshot,
-  doc,
-} from "firebase/firestore";
-import { db, auth } from "../firebase/firebase";
+doc,
+onSnapshot
+} from "firebase/firestore"
+import { auth, db } from "../firebase/firebase"
 export default {
   data() {
     return {
