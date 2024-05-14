@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+  background-color: #14002e;
 }

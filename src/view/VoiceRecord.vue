@@ -31,9 +31,7 @@
         >
           <h1 class="text-[40px] font-bold">Жұмысты Бастау</h1>
           <p class="font-bold text-[20px]">
-            Air bit платформасын пайдалану туралы білуіңіз керек барлық нәрсе,
-            негізгі есептік жазбаны орнатудан бастап кеңейтілген сату
-            мүмкіндіктерін пайдалануға дейін, сіз мұның бәрін үйренесіз.
+            YourBeat музыкалық студиясы арқылы армандарыңызды орындаңыз!
           </p>
         </div>
       </div>
@@ -54,8 +52,8 @@
         >
           <h1 class="text-[40px] font-bold">Хабарландырулар</h1>
           <p class="font-bold text-[20px]">
-            Барлық Жаңа Нәрселерді Біліп Алыңыз, Бірақ Жаңа мүмкіндіктер,
-            іс-шаралар, байқаулар және т.б. арқылы Ұсынуға тура келеді.
+            Барлық жаңа нәрселерді біліп алыңыз, бірақ жаңа мүмкіндіктер,
+            іс-шаралар, байқаулар және т.б. арқылы дамыңыз.
           </p>
         </div>
       </div>
@@ -90,7 +88,7 @@
         >
           <h1 class="text-[40px] font-bold">Бізге қосылыңыз</h1>
           <p class="font-bold text-[20px]">
-            Creator Hub және қауымдастығымыздағы жаңа мазмұн туралы хабарландыру
+            Жаңа мазмұн туралы хабарландыру
             алу үшін біздің тарату тізімімізге жазылыңыз
           </p>
         </div>
@@ -104,8 +102,8 @@
         alt=""
       />
       <div class="w-[450px]">
-        <h1 class="text-[30px] font-bold text-red-500">СТУДИЯ ДЕГЕНІМІЗ НЕ</h1>
-        <div class="text-[20px]">
+        <h1 class="text-[30px] font-bold text-[#6900FF]">СТУДИЯ ДЕГЕНІМІЗ НЕ</h1>
+        <div class="text-[20px] text-white">
           Онлайн студия-бұл вокал мен аспаптарды желіде жазуға, жасалған
           тректерді кәсіби жабдықтар мен дағдыларсыз өңдеуге болатын қызмет.
         </div>
@@ -114,8 +112,8 @@
 
     <div class="mt-[55px] flex justify-evenly items-center">
       <div class="w-[450px]">
-        <h1 class="text-[30px] font-bold text-red-500">Студия не үшін қажет</h1>
-        <div class="text-[20px]">
+        <h1 class="text-[30px] font-bold text-[#6900FF]">Студия не үшін қажет</h1>
+        <div class="text-[20px] text-white">
           Сіз өзіңіздің битiңізді жазғыңыз келді, бірақ мүмкіндік таппадыңыз ба?
           Қазір бұл қарапайым және бәріне қол жетімді! Ешқайда барудың қажеті
           жоқ: студияны ашыңыз, кез - келген тректі Музалар каталогынан жүктеңіз
@@ -129,14 +127,14 @@
         alt=""
       />
     </div>
-    <div class="ml-[75px] flex bg-[#EEF3F7] rounded-[25px] mt-[45px] p-[30px]">
+    <div class="ml-[75px] flex bg-[#6900FF] rounded-[25px] mt-[45px] p-[30px]">
       <img class="w-[500px] rounded-[15px]" src="../assets/bg2.webp" alt="" />
       <div class="ml-[15px]">
-        <h1 class="font-[500] text-[45px] text-red-500">
+        <h1 class="font-[500] text-[45px] text-white font-bold">
           Студия мүмкіндіктері
         </h1>
         <ol
-          class="ps-5 mt-2 space-y-1 list-decimal list-inside w-[600px] text-[20px]"
+          class="ps-5 mt-2 space-y-1 list-decimal list-inside w-[600px] text-[20px] text-white"
         >
           <li class="mt-[15px]">
             Сіз 7 тректі жаза аласыз, олардың әрқайсысын кез келген рет өңдеуге
@@ -152,53 +150,7 @@
         </ol>
       </div>
     </div>
-    <div
-      class="border-[#14002E] text-[#14002E] p-[45px] border-[1px] rounded-[30px] mt-[25px] w-[100%] h-[100%]"
-    >
-      <h1 class="text-[30px] font-bold">Циклде болыңыз</h1>
-      <p>
-        108 Елден 800 000 жасаушыға Қосылыңыз, Олар Бір-біріміздің
-        көңіл-күйімізді көтеру, байланыс орнату және ынтымақтастық үшін жұмыс
-        істеп жатқан Кезде Эфирді, бірақ қауымдастықты құрайды.
-      </p>
-      <div class="flex justify-between w-[450px]">
-        <div class="w-[100%]">
-          <label
-            for="first_name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Аты</label
-          >
-          <input
-            type="text"
-            id="first_name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 w-[100%] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Аты"
-            required
-          />
-        </div>
-        <div class="ml-[10px]">
-          <label
-            for="first_name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Email</label
-          >
-          <input
-            type="text"
-            id="first_name"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Email"
-            required
-          />
-        </div>
-      </div>
-      <button
-        type="button"
-        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium border-[#14002E] w-[150px] mt-[30px] text-gray-900 focus:outline-none bg-white rounded-lg border hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-      >
-        Тiркелу
-      </button>
     </div>
-  </div>
 </template>
 
 <script>
