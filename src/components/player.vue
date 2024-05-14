@@ -195,7 +195,7 @@
       class="text-[30px] bg-white w-[600px] h-[520px] rounded-[15px] p-[35px]"
     >
       <div class="flex">
-        <img :src="currentTrack.cover" class="rounded-[15px]" alt="" />
+        <img :src="currentTrack.cover" class="rounded-[15px] h-[150px]" alt="" />
         <div class="ml-[15px]">
           <h1 class="text-[50px]">{{ currentTrack.name }}</h1>
           <p class="tex-[25px]">{{ currentTrack.artist }}</p>
