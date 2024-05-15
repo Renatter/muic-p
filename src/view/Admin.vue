@@ -3,7 +3,7 @@
     <button
       @click="openModal"
       type="button"
-      class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+      class="mt-[25px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
     >
       Қосу
     </button>
@@ -12,9 +12,18 @@
       <button
         @click="openModal"
         type="button"
-        class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        class="mt-[25px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
       >
         Музыкага тапсырыс
+      </button>
+    </router-link>
+    <router-link to="/msg">
+      <button
+        @click="openModal"
+        type="button"
+        class="mt-[25px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+      >
+        Хабарламалар
       </button>
     </router-link>
     <div class="flex flex-wrap gap-[25px]">
@@ -133,7 +142,6 @@
         Қосу
       </button>
       <div class="flex justify-between">
-
         <div>
           <label
             for="first_name"

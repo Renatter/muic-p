@@ -42,8 +42,12 @@
         <div class="progress" ref="progress">
           <div class="progress__top">
             <div class="album-info" v-if="currentTrack">
-              <div class="album-info__name text-white">{{ currentTrack.artist }}</div>
-              <div class="album-info__track text-white">{{ currentTrack.name }}</div>
+              <div class="album-info__name text-white">
+                {{ currentTrack.artist }}
+              </div>
+              <div class="album-info__track text-white">
+                {{ currentTrack.name }}
+              </div>
             </div>
             <div class="progress__duration">{{ duration }}</div>
           </div>
@@ -100,16 +104,16 @@
   >
     <div class="flex justify-between">
       <div>
-        <h1 class="text-[70px] text-white font-bold">{{ currentTrack.name }}</h1>
+        <h1 class="text-[70px] text-white font-bold">
+          {{ currentTrack.name }}
+        </h1>
         <p class="text-[30px] text-white">Автор: {{ currentTrack.artist }}</p>
         <p class="text-[30px] text-white">Саны: {{ currentTrack.count }}шт</p>
         <p class="text-[30px] text-white">
           Жанрлар:
-          <span
-            v-for="i in currentTrack.genre"
-            class="mr-[15px] text-white"
-            >{{ i }}</span
-          >
+          <span v-for="i in currentTrack.genre" class="mr-[15px] text-white">{{
+            i
+          }}</span>
         </p>
       </div>
       <img
@@ -121,16 +125,17 @@
       <div>
         <div
           href="#"
-          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px]  hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px] hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
             class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            MP3 форматында сатып алу<br> {{ currentTrack.defPrice }} тг
+            MP3 форматында сатып алу<br />
+            {{ currentTrack.defPrice }} тг
           </h5>
           <p class="font-normal text-white dark:text-gray-400 h-[200px]">
             Битті mp3 320kb/s форматында жоғары сапалы, оған жазу және
-            материалды тарату құқығымен сатып алу. 
+            материалды тарату құқығымен сатып алу.
           </p>
           <button
             @click="openModal(), (curPrice = currentTrack.defPrice)"
@@ -144,16 +149,17 @@
       <div>
         <div
           href="#"
-          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px]  hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block max-w-sm h-[440px] p-6 bg-gray-800 rounded-[15px] hover:border-[2px] dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
             class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            Wav форматында сатып алу <br> {{ currentTrack.soPrice }} тг
+            Wav форматында сатып алу <br />
+            {{ currentTrack.soPrice }} тг
           </h5>
           <p class="font-normal text-white dark:text-gray-400 h-[200px]">
-            WAV 24bit+Mp3 320kb/s форматындағы битті жоғары сапалы,
-            оны жазу және материалды тарату құқығымен сатып алу.
+            WAV 24bit+Mp3 320kb/s форматындағы битті жоғары сапалы, оны жазу
+            және материалды тарату құқығымен сатып алу.
           </p>
           <button
             @click="openModal(), (curPrice = currentTrack.soPrice)"
@@ -172,7 +178,7 @@
           <h5
             class="mb-[65px] text-2xl font-bold tracking-tight text-white dark:text-white"
           >
-            Премиум <br>{{ currentTrack.fullPrice }} тг
+            Премиум <br />{{ currentTrack.fullPrice }} тг
           </h5>
           <p class="font-normal text-white dark:text-gray-400 h-[270px]">
             Толық бит құқықтары сатып алушыға беріледі. Бит жоғары сапалы Wav
@@ -195,7 +201,11 @@
       class="text-[30px] bg-white w-[600px] h-[520px] rounded-[15px] p-[35px]"
     >
       <div class="flex">
-        <img :src="currentTrack.cover" class="rounded-[15px] h-[150px]" alt="" />
+        <img
+          :src="currentTrack.cover"
+          class="rounded-[15px] h-[150px]"
+          alt=""
+        />
         <div class="ml-[15px]">
           <h1 class="text-[50px]">{{ currentTrack.name }}</h1>
           <p class="tex-[25px]">{{ currentTrack.artist }}</p>
@@ -285,14 +295,14 @@
 
 <script>
 import {
-addDoc,
-collection,
-getDocs,
-query,
-updateDoc,
-where
-} from "firebase/firestore"
-import { db } from "../firebase/firebase"
+  addDoc,
+  collection,
+  getDocs,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore";
+import { db } from "../firebase/firebase";
 export default {
   data() {
     return {
@@ -631,7 +641,7 @@ body {
         font-size: 26px;
         padding: 5px;
         margin-right: 10px;
-        color: #white;
+        color: white;
         cursor: pointer;
         width: 40px;
         height: 40px;

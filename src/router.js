@@ -12,6 +12,7 @@ import VoiceRecord from "./view/VoiceRecord.vue";
 import About from "./view/About.vue";
 import Admin from "./view/Admin.vue";
 import Order from "./view/Order.vue";
+import Messages from "./view/Messages.vue";
 const routes = [{
         path: '/',
         redirect: '/main-page/catalog' // Перенаправляем корень на /main-page/catalog
@@ -58,6 +59,10 @@ const routes = [{
     {
         path: '/sell',
         component: SellMusic
+    },
+    {
+        path: '/msg',
+        component: Messages
     },
 ];
 
