@@ -4,7 +4,7 @@
     <div class="flex flex-wrap gap-[15px]">
       <div
         v-for="item in items"
-        class="w-[250px] h-[200px] bg-[#9347FF] rounded-[20px] p-[30px] mt-[30px]"
+        class="w-[250px] h-[100%] bg-[#9347FF] rounded-[20px] p-[30px] mt-[30px]"
       >
         <p>
           Аты: <span class="text-[black]">{{ item.name }}</span>
@@ -19,6 +19,13 @@
         <p class="bg-[#C13592] h-[50px] pl-[5px] rounded-[10px] pt-[10px]">
           <span class="text-[white]">{{ item.text }}</span>
         </p>
+        <button
+          @click="deleteItem(item.email)"
+          type="button"
+          class="mt-[15px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 w-[100%]"
+        >
+          Жою
+        </button>
       </div>
     </div>
   </div>
@@ -41,24 +48,14 @@ export default {
     };
   },
   methods: {
-    async deleteItem(itemEmail, itemName) {
+    async deleteItem(itemEmail) {
       const querySnapshot = await getDocs(
-        query(collection(db, "orders"), where("email", "==", itemEmail))
+        query(collection(db, "messages"), where("email", "==", itemEmail))
       );
 
       querySnapshot.forEach(async (doc) => {
         await deleteDoc(doc.ref);
         window.location.reload();
-      });
-
-      const q = await getDocs(
-        query(collection(db, "tracks"), where("name", "==", itemName))
-      );
-      q.forEach(async (doc) => {
-        let num = doc.data().count;
-        await updateDoc(doc.ref, {
-          count: num - 1,
-        });
       });
     },
   },
