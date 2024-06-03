@@ -72,7 +72,7 @@ export default {
       try {
         await createUserWithEmailAndPassword(auth, this.email, this.password);
         await signInWithEmailAndPassword(auth, this.email, this.password);
-        await setDoc(doc(db, "userProfile", currentUser.uid), {
+        await setDoc(doc(db, "users", currentUser.uid), {
           email: this.email,
           password: this.password,
           role: "admin",
