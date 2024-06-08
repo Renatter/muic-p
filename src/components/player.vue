@@ -197,9 +197,7 @@
     </div>
   </div>
   <div class="modal" v-if="modalOpen === true">
-    <div
-      class="text-[30px] bg-white w-[600px] h-[520px] rounded-[15px] p-[35px]"
-    >
+    <div class="text-[30px] bg-white w-[600px] rounded-[15px] p-[35px]">
       <div class="flex">
         <img
           :src="currentTrack.cover"
@@ -275,6 +273,30 @@
         />
       </div>
       <p>Бағасы: {{ curPrice }} тг</p>
+      <div class="flex justify-between">
+        <img width="200px" src="../assets/hqr.png" alt="" />
+        <img width="200px" src="../assets/kqr.png" alt="" />
+      </div>
+
+      <label
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        for="file_input"
+        >Upload file</label
+      >
+      <input
+        @change="onFileChange"
+        class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+        id="file_input"
+        type="file"
+      />
+      <button
+        v-if="file"
+        @click="uploadImage"
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Косу
+      </button>
       <button
         @click="addOrder"
         type="button"
@@ -295,14 +317,25 @@
 
 <script>
 import {
+  doc,
+  deleteDoc,
+  updateDoc,
+  getDoc,
+  query,
+  where,
+  onSnapshot,
   addDoc,
   collection,
   getDocs,
-  query,
-  updateDoc,
-  where,
 } from "firebase/firestore";
-import { db } from "../firebase/firebase";
+import { db, storage } from "../firebase/firebase";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  deleteObject,
+  listAll,
+} from "firebase/storage";
 export default {
   data() {
     return {
@@ -322,10 +355,28 @@ export default {
       clickCount: 0,
       email: "",
       name: "",
+      qr: "",
       phone: "",
+      imageUrls: [],
+      musUrls: [],
+      img: "null",
+      file: null,
     };
   },
   methods: {
+    async uploadImage() {
+      const storageRef = ref(storage, `qr/${this.file.name}`);
+      await uploadBytes(storageRef, this.file);
+      const downloadUrl = await getDownloadURL(storageRef);
+
+      this.imageUrls.push(downloadUrl);
+      this.qr = this.imageUrls[0];
+      this.file = null;
+    },
+    onFileChange(e) {
+      this.file = e.target.files[0];
+      console.log(this.file);
+    },
     openModal() {
       this.modalOpen = true;
     },
@@ -342,6 +393,7 @@ export default {
           email: this.email,
           userName: this.name,
           phone: this.phone,
+          qr: this.qr,
         });
         this.closeModal();
         console.log("Email added successfully!");

@@ -6,7 +6,7 @@
       >
         <form class="space-y-6" action="#" @submit.prevent="login">
           <h5 class="text-xl font-medium text-gray-900 dark:text-white">
-            Админ
+            Менеджер
           </h5>
           <div>
             <label
@@ -72,10 +72,11 @@ export default {
       try {
         await createUserWithEmailAndPassword(auth, this.email, this.password);
         await signInWithEmailAndPassword(auth, this.email, this.password);
-        await setDoc(doc(db, "users", currentUser.uid), {
+        const currentUser = auth.currentUser;
+        await setDoc(doc(db, "manager", currentUser.uid), {
           email: this.email,
           password: this.password,
-          role: "admin",
+          role: "manager",
         });
       } catch (error) {
         console.log("Ошибка при регистрации пользователя:", error);

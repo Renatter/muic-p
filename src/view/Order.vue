@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <h1 class="text-[35px] mb-10 text-white font-bold mt-10">Тапсырыстар</h1>
-      <div class="flex gap-[15px]">
+      <div class="flex gap-[15px] flex-wrap">
         <div
           class="rounded-[15px] bg-[#cbb3ee] w-[270px] h-[100%] p-[20px]"
           v-for="i in item"
@@ -13,10 +13,18 @@
           <p>Номерi: {{ i.phone }}</p>
           <p>Бағасы:{{ i.price }}</p>
           <p>Бит: {{ i.name }}</p>
+          <a :href="i.qr">
+            <button
+              type="button"
+              class="mt-[15px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 w-[100%]"
+            >
+              QR
+            </button>
+          </a>
           <button
             @click="deleteItem(i.email, i.name)"
             type="button"
-            class="mt-[15px] focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 w-[100%]"
+            class="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 w-[100%]"
           >
             Жасалды
           </button>
