@@ -11,14 +11,14 @@
         <router-link :to="{ path: 'mus-page/' + i.name }">
           <div class="image-wrapper">
             <img
-              class="rounded-[10px] image w-full mb-5 object-cover"
+              class="rounded-[10px] image w-full mb-5 object-cover h-[200px]"
               :src="i.cover"
               alt=""
             />
           </div>
         </router-link>
-        <p class='text-white text-xl'>
-          {{ i.name }} <br><span>{{ i.fullPrice }}тг</span>
+        <p class="text-white text-xl">
+          {{ i.name }} <br /><span>{{ i.fullPrice }}тг</span>
         </p>
         <router-link :to="{ path: 'mus-page/' + i.name }">
           <button
@@ -91,12 +91,9 @@
 </template>
 
 <script>
-import {
-collection,
-getDocs
-} from "firebase/firestore"
-import { db } from "../firebase/firebase"
-import { useAnimeApi } from "../tracks"
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase/firebase";
+import { useAnimeApi } from "../tracks";
 export default {
   data() {
     return {
@@ -111,9 +108,9 @@ export default {
         "FOLK",
         "DANCE",
         "TECHNO",
-        "RUS",
-        "ENG",
-        "KZ",
+        "Орысша",
+        "Ағылшынша",
+        "Қазақша",
       ],
     };
   },
