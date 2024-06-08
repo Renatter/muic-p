@@ -41,7 +41,7 @@ export default {
           name: "Артур Айдарханов",
           position: "Менеджер",
           image:
-            "https://www.allkpop.com/upload/2021/07/content/161603/1626465825-image.png",
+            "https://weproject.media/upload/medialibrary/86e/86e61bb8582a6b0f1fcacb6fbdf1f2a5.jpeg",
           description:
             "Музыкалық студияда басқару және өндіру ісінен жауапты. Өзінің тараптарын жинау, қоғамдық медианы өзінің дайындығымен алмасу, музыкалық қоғамнан қолдау алу, музыкалық қалыптасу кезінде көмек көрсету.",
           isExpanded: false,
@@ -50,7 +50,7 @@ export default {
           name: "Алия Сарсенбаева",
           position: "Артист",
           image:
-            "https://avatars.dzeninfra.ru/get-zen_doc/119173/pub_5d7898b578125e00ad8d2380_5d791f659515ee00ae412174/scale_1200",
+            "https://avatars.dzeninfra.ru/get-zen_doc/3840910/pub_5fb284c3b32163393727e9ce_5fb54ef7541585566c682d8f/scale_1200",
           description:
             "Музыкалық студияда музыка жасау және исполнительдік істерін атқару. Өзге жағдайларда Алия арт-директор ретінде жұмыс істеді және бизнес дамуына арналған өзінің көмегін ұсынады.",
           isExpanded: false,
@@ -59,7 +59,7 @@ export default {
           name: "Нурлан Темирбек",
           position: "Дыбыстық инженер",
           image:
-            "https://ottoke.io/images/upload_text_photo/b63b29e6700b037653cf8c92aa8f439d_1646742868.jpg",
+            "https://st4.depositphotos.com/1049680/31606/i/450/depositphotos_316062724-stock-photo-young-asian-chinese-man-wearing.jpg",
           description:
             "Музыкалық студияда техникалық қызметтерді басқару. Музыкалық жұмыс істегендерге кеңес беру, техникалық мәселелерде көмек көрсету.",
           isExpanded: false,
@@ -68,7 +68,7 @@ export default {
           name: "Динара Бекбаева",
           position: "Ұйымдастырушы",
           image:
-            "https://ottoke.io/images/upload_text_photo/Screenshot_2021-03-18-08-15-07-82_copy_1080x720_1646922095.jpg",
+            "https://avatars.dzeninfra.ru/get-zen_doc/1587710/pub_5e63f4f513ba980e68fc83e2_5e63f501b86afa74c58d8188/scale_1200",
           description:
             "Музыкалық студияда ұйымдастыру және бағдарламалау ісінен жауапты. Бастапқы жолмен, ол маркетинг және қоғамдық кеңес беру істерінің бірі болып табылады.",
           isExpanded: false,
@@ -77,34 +77,9 @@ export default {
           name: "Айдар Сапаров",
           position: "Дизайнер",
           image:
-            "https://sun9-37.userapi.com/impf/c855628/v855628475/133bb3/PNKVyk5Y8aE.jpg?size=768x512&quality=96&sign=e5a73e76269534193d190c6fec4bca26&type=album",
+            "https://migranturus.com/wp-content/uploads/2021/03/large_0b2909f9-68ac-4f5f-b.jpeg",
           description:
             "Музыкалық студияда креативті дизайнер. Интернет-маркетинг және дизайн саласында қасиетті біліммен өнімдерді жасайды.",
-          isExpanded: false,
-        },
-        {
-          name: "Марат Аскаров",
-          position: "Директор",
-          image:
-            "https://www.yesasia.ru/wp-content/uploads/2023/02/Namjoohyuk_picture_.png",
-          description:
-            "Музыкалық студияның директоры. Компанияның техникалық жағдайлары мен мәдени іс-шараларды басқару.",
-          isExpanded: false,
-        },
-        {
-          name: "Айгерим Айшова",
-          position: "Продюсер",
-          image:
-            "https://ottoke.io/images/upload_text_photo/563595127_1646918575.jpg",
-          description: "Музыкалық студияда продюсерлік ісімен атқарады",
-          isExpanded: false,
-        },
-        {
-          name: "Аяжан Каримова",
-          position: "Продюсер",
-          image:
-            "https://media.krasota.ru/filer_public/8b/62/8b62bbe0-a3cc-4ec7-9794-cc3c7b57ca4d/4_res750.jpg",
-          description: "Музыкалық студияда продюсерлік ісін атқарады",
           isExpanded: false,
         },
       ],
